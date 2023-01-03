@@ -14,7 +14,7 @@ Avans TI - SLOM4 CAA - Delayed completion P1-2 2022/2023
  * Sectie 04: 4h
  * Sectie 05: 0h30m
  * Sectie 06: 1h
- * Sectie 07: 2h30m
+ * Sectie 07: 3h30m
  * Sectie 08: 
  * Sectie 09: 
  * Sectie 10: 
