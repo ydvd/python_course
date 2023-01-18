@@ -10,28 +10,36 @@ class MainWindow(QWidget):
 
     def init_ui(self):
 
+        self.text_label = QLabel("---")
         label = QLabel("Name: ")
-        name_input = QLineEdit()
+        self.name_input = QLineEdit()
         button = QPushButton("Set name")
-        button.clicked.connect(self.clickedButton)
+        button.clicked.connect(self.alterName)
+
 
         hori = QHBoxLayout()
         # hori.addStretch(1)
         hori.addWidget(label)
-        hori.addWidget(name_input)
+        hori.addWidget(self.name_input)
 
         verti = QVBoxLayout()
+        verti.addWidget(self.text_label)
         verti.addLayout(hori)
         verti.addWidget(button)
         verti.addStretch()
 
         self.setLayout(verti)
-        self.setWindowTitle("horizontal layout")
+        # self.setWindowTitle("horizontal layout")
+        self.setWindowTitle("Nothing has been clicked")
         self.show()
 
-    def clickedButton(self):
-        print( "Button click" )
-        self.setWindowTitle("can i do this?")
+    def alterName(self): 
+        self.text_label.setText(self.name_input.text())
+        self.setWindowTitle(self.name_input.text() + "'s window")
+
+    # def clickedButton(self):
+    #     print( "Button click" )
+    #     self.setWindowTitle("can i do this?")
 
 
 if __name__ == "__main__":
